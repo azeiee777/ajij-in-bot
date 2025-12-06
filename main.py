@@ -8,11 +8,12 @@ from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 
 from langchain_community.document_loaders import WebBaseLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter  # ✅ FIXED
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
+
 
 
 # ---------- CONFIG ----------
